@@ -7,6 +7,8 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
+import { DefaultSeo } from 'next-seo';
+
 import ManagedUIContext from '@components/ui/context';
 import Layout from '@components/ui/Layout';
 
@@ -28,6 +30,10 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script type="text/javascript" src="/js/redirectIE.js" />
       </Head>
+      <DefaultSeo
+        title="My NextJS App"
+        description="template for nextjs-mongodb web application."
+      />
       <ManagedUIContext>
         <Layout>
           <Component {...pageProps} />

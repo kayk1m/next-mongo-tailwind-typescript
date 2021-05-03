@@ -14,7 +14,6 @@ const Layout: React.FC = ({ children }) => {
     <div className="relative min-h-full w-full">
       <main className="relative">{children}</main>
       <Modal show={modalFlag} {...modalContent} />
-
       <Notification
         show={notiFlag}
         close={() => closeNoti()}
