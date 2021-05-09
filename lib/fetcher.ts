@@ -1,7 +1,8 @@
-const fetcher: (url: string, init?: RequestInit) => Promise<any> = async (url, init) => {
+export default async function fetcher<T>(
+  url: string,
+  init?: RequestInit,
+): Promise<T> {
   const response = await fetch(url, init);
 
   return await response.json();
 }
-
-export default fetcher;
