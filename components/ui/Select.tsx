@@ -14,7 +14,7 @@ type Props<T> = {
   className?: string;
   label?: string;
   items: SelectItem<T>[];
-  selectedValue: unknown;
+  selectedValue: T;
   onSelect: (item: SelectItem<T>) => void;
   optional?: boolean;
 };
